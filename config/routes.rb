@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     resources :books, except: :edit
   end
 
-  get 'books(*path)' => 'books#index'
+  get 'books(*path)' => 'application#index'
+  get 'favorites(*path)' => 'application#index'
   root to: 'welcome#index'
 end
