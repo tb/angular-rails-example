@@ -3,7 +3,6 @@ Rails.application.routes.draw do
     resources :books, except: :edit
   end
 
-  get ':id' => 'welcome#index'
-  get 'new' => 'welcome#index'
+  get 'books(*path)' => 'books#index'
   root to: 'welcome#index'
 end

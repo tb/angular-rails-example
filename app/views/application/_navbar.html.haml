@@ -1,0 +1,8 @@
+%nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      .navbar-brand AngularRailsExample
+    #navbar.navbar-collapse.collapse
+      %ul.nav.navbar-nav
+        = active_link_to 'Welcome', '/', wrap_tag: :li, active: :exclusive
+        = active_link_to 'Books', '/books', wrap_tag: :li

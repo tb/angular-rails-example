@@ -5,6 +5,8 @@ gem 'sqlite3'
 gem 'sass-rails', '~> 5.0.0.beta1'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
+gem 'haml'
+gem 'active_link_to'
 
 gem 'jquery-rails'
 gem 'bootstrap-sass'

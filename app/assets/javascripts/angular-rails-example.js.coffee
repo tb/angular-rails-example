@@ -6,14 +6,15 @@ app = angular.module 'angular-rails-example', ['ngRoute', 'booksController', 'te
 
 app.config ['$routeProvider', '$locationProvider', '$httpProvider',
   ($routeProvider, $locationProvider, $httpProvider) ->
+    $locationProvider.html5Mode true
     $routeProvider
-      .when '/',
+      .when '/books',
         templateUrl: 'books/index.html'
         controller : 'BooksController'
-      .when '/:id',
+      .when '/books/:id',
         templateUrl: 'books/form.html'
         controller : 'BookController'
       .otherwise
-        redirectTo: '/'
+        redirectTo: '/books'
     $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
 ]
