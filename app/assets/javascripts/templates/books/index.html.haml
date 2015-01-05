@@ -1,0 +1,29 @@
+.row
+  .col-sm-12
+    %header.page-header
+      %h2 Books
+
+      %a(href='/' target='_self') Welcome
+      |
+      %a(href='http://google.com') google.com
+      |
+      %a(href='/books') Books
+      |
+      %a(href='/favorites') Favorites
+
+    %table.table
+      %thead
+        %tr
+          %th.remove-col
+          %th.isbn-col ISBN
+          %th.author-col Author(s)
+          %th.title-col Title
+          %th.price-col Price
+          %th.action-col
+      %tbody
+        %tr{:book => "book", "book-row" => "", "ng-repeat" => "book in books", :removebook => "removeBook(book)"}
+      %tfoot
+        %tr
+          %td{:colspan => "6"}
+            .pull-right
+              %a.btn.btn-primary{"ng-href" => "/books/new"} New Book
