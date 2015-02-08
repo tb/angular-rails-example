@@ -1,0 +1,10 @@
+%td.remove-col
+  %a.text-danger(ng-click="removeBook(book)")
+    %i.glyphicon.glyphicon-remove
+%td {{ book.isbn }}
+%td {{ book.author }}
+%td {{ book.title }}
+%td $ {{ book.price / 1000 | number : 2 }}
+%td
+  %a(href="/books/{{book.id}}")
+    %i.glyphicon.glyphicon-pencil

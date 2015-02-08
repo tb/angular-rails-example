@@ -13,11 +13,11 @@
           %th.price-col Price
           %th.action-col
       %tbody
-        %tr{:book => "book", "book-row" => "", "ng-repeat" => "book in books", :removebook => "removeBook(book)"}
+        %tr(book-row="book" ng-repeat="book in books" remove-book="removeBook(book)")
       %tfoot
         %tr
           %td{:colspan => "6"}
             .pull-right
-              %a.btn.btn-primary{"ng-href" => "/books/new"} New Book
+              %a.btn.btn-primary(href="/books/new") New Book
 
 %div(ng-include="'links.html'")
