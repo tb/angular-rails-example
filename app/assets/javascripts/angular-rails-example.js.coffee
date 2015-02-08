@@ -1,6 +1,4 @@
-#= require templates/books/index
-#= require templates/books/form
-#= require templates/favorites/index
+#= require_tree ./templates
 #= require controllers/books-controller
 #= require controllers/favorites-controller
 

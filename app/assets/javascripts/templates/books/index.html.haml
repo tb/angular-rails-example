@@ -3,14 +3,6 @@
     %header.page-header
       %h2 Books
 
-      %a(href='/' target='_self') Welcome
-      |
-      %a(href='http://google.com') google.com
-      |
-      %a(href='/books') Books
-      |
-      %a(href='/favorites') Favorites
-
     %table.table
       %thead
         %tr
@@ -27,3 +19,5 @@
           %td{:colspan => "6"}
             .pull-right
               %a.btn.btn-primary{"ng-href" => "/books/new"} New Book
+
+%div(ng-include="'links.html'")
